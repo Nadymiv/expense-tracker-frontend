@@ -14,6 +14,7 @@ export const LoginPage = () => {
         setError("");
         try {
             await login({ email, password });
+            console.log("LOGIN SUCCESS, navigating to /");
             navigate("/");
         } catch (err) {
             setError("Помилка входу. Перевір дані або конфіг CORS");
